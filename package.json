@@ -1,0 +1,12 @@
+{
+  "name": "learing-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc && node ."
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
+}
