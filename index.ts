@@ -92,3 +92,35 @@ showValue(['Dionei', 'Manu', 'Charlei'])
 
 
 
+//6. Typing in an array
+console.log('6')
+console.log('TYPING IN AN ARRAY')
+
+type Car = {
+  model: string,
+  year: number,
+  branch: string
+}
+
+interface Bike {
+  branch: string,
+  wheelSize: number
+}
+
+type ArrayOfStrings = Array<string>
+type ArrayOfNumbers = Array<number>
+type ArrayOfCars    = Array<Car>
+type ArrayOfBikes   = Array<Bike>
+
+const arrStrings: ArrayOfStrings = ['Dionei', 'Manu', 'Charlei']
+const arrNumbers: ArrayOfNumbers = [1, 2, 3, 4, 5]
+const arrCars:    ArrayOfCars    = [{branch: 'VW', year: 2010, model: 'Gol'},
+                                    {branch: 'VW', year: 2020, model: 'Tiguan'}]
+const arrBikes:   ArrayOfBikes   = [{branch: 'Specialized', wheelSize: 22},
+                                    {branch: 'Specialized', wheelSize: 26}]
+
+console.log('Type of arrString is',  typeof arrStrings)
+console.log('Type of arrNumbers is', typeof arrNumbers)
+console.log('Type of arrCars is',    typeof arrCars)
+console.log('Type of arrBikes is',   typeof arrBikes)
+

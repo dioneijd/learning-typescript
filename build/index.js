@@ -57,3 +57,16 @@ console.log('Calling function passing single value');
 showValue('Dionei');
 console.log('Calling function passing values in an array');
 showValue(['Dionei', 'Manu', 'Charlei']);
+//6. Composing Types (GENERICS)
+console.log('5');
+console.log('COMPOSING TYPES (GENERICS)');
+const arrStrings = ['Dionei', 'Manu', 'Charlei'];
+const arrNumbers = [1, 2, 3, 4, 5];
+const arrCars = [{ branch: 'VW', year: 2010, model: 'Gol' },
+    { branch: 'VW', year: 2020, model: 'Tiguan' }];
+const arrBikes = [{ branch: 'Specialized', wheelSize: 22 },
+    { branch: 'Specialized', wheelSize: 26 }];
+console.log('Type of arrString is', typeof arrStrings);
+console.log('Type of arrNumbers is', typeof arrNumbers);
+console.log('Type of arrCars is', typeof arrCars);
+console.log('Type of arrBikes is', typeof arrBikes);
