@@ -124,3 +124,31 @@ console.log('Type of arrNumbers is', typeof arrNumbers)
 console.log('Type of arrCars is',    typeof arrCars)
 console.log('Type of arrBikes is',   typeof arrBikes)
 
+
+//7. Composing Types (GENERICS)
+console.log('7')
+console.log('COMPOSING TYPES (GENERICS)')
+
+interface GenericObj<Type> {
+  add: (obj: Type) => void
+  get: () => Type
+}
+
+const varTypedAsString: GenericObj<string> = {
+  add: (param) => console.log('Type of param of function [add] is', typeof param, 'and value is', param ),
+  get: () => '123'
+}
+
+const varTypedAsNumber: GenericObj<number> = {
+  add: (param) => console.log('Type of param of function [add] is', typeof param, 'and value is', param ),
+  get: () => 123
+}
+
+varTypedAsString.add('123')
+varTypedAsNumber.add(123)
+
+const getOfString = varTypedAsString.get()
+const getOfNumber = varTypedAsNumber.get()
+
+console.log('Type a var typed with string is', typeof getOfString)
+console.log('Type a var typed with number is', typeof getOfNumber)

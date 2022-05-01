@@ -57,9 +57,9 @@ console.log('Calling function passing single value');
 showValue('Dionei');
 console.log('Calling function passing values in an array');
 showValue(['Dionei', 'Manu', 'Charlei']);
-//6. Composing Types (GENERICS)
-console.log('5');
-console.log('COMPOSING TYPES (GENERICS)');
+//6. Typing in an array
+console.log('6');
+console.log('TYPING IN AN ARRAY');
 const arrStrings = ['Dionei', 'Manu', 'Charlei'];
 const arrNumbers = [1, 2, 3, 4, 5];
 const arrCars = [{ branch: 'VW', year: 2010, model: 'Gol' },
@@ -70,3 +70,20 @@ console.log('Type of arrString is', typeof arrStrings);
 console.log('Type of arrNumbers is', typeof arrNumbers);
 console.log('Type of arrCars is', typeof arrCars);
 console.log('Type of arrBikes is', typeof arrBikes);
+//7. Composing Types (GENERICS)
+console.log('7');
+console.log('COMPOSING TYPES (GENERICS)');
+const varTypedAsString = {
+    add: (param) => console.log('Type of param of function [add] is', typeof param, 'and value is', param),
+    get: () => '123'
+};
+const varTypedAsNumber = {
+    add: (param) => console.log('Type of param of function [add] is', typeof param, 'and value is', param),
+    get: () => 123
+};
+varTypedAsString.add('123');
+varTypedAsNumber.add(123);
+const getOfString = varTypedAsString.get();
+const getOfNumber = varTypedAsNumber.get();
+console.log('Type a var typed with string is', typeof getOfString);
+console.log('Type a var typed with number is', typeof getOfNumber);
