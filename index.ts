@@ -152,3 +152,49 @@ const getOfNumber = varTypedAsNumber.get()
 
 console.log('Type a var typed with string is', typeof getOfString)
 console.log('Type a var typed with number is', typeof getOfNumber)
+
+
+//8. Structural Type System (Shapes)
+console.log('8')
+console.log('STRUCTURAL TYPE SYSTEM (SHAPES)')
+
+interface Human {
+  name: string
+  age: number
+}
+
+interface Father {
+  name: string
+  age: number
+  children?: [Child]
+}
+
+interface Mother {
+  name: string
+  age: number
+  children?: [Child]
+}
+
+interface Child {
+  name: string
+  age: number
+  mother: Mother
+  father?: Father
+}
+
+function showYearOfBirth(person: Human) {
+  const currentYear: number = 2022
+  const yearOfBirth: number = currentYear - person.age
+  console.log('Person parameter received', person, 'and the year of birth is', yearOfBirth)
+}
+
+const father1: Father = { name: 'Dionei',  age: 34 }
+const mother1: Mother = { name: 'Manu',    age: 27 }
+const child1:  Child  = { name: 'Charlie', age: 3, father: father1, mother: mother1 }
+
+
+showYearOfBirth(father1)
+showYearOfBirth(mother1)
+showYearOfBirth(child1)
+showYearOfBirth({ age: 80, name: 'Teste' }) // inverted parameter sequence 
+
