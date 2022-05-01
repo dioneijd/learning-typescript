@@ -37,3 +37,23 @@ console.log('4');
 console.log('COMPOSING TYPES (UNION)');
 const personGender = "Male";
 console.log('Type of personGender is', typeof personGender, 'and value is', personGender);
+//5. Function receive different parameters
+console.log('5');
+console.log('FUNCTION RECEIVING DIFFERENT PARAMETERS');
+console.log('Type FuncParameter accepts a single string or an array of strings');
+function showValue(value) {
+    let arr = [];
+    if (typeof value == 'string') {
+        arr.push(value);
+    }
+    else {
+        arr = value;
+    }
+    arr.forEach(stringElement => {
+        console.log('>>>', stringElement);
+    });
+}
+console.log('Calling function passing single value');
+showValue('Dionei');
+console.log('Calling function passing values in an array');
+showValue(['Dionei', 'Manu', 'Charlei']);

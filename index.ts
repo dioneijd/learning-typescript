@@ -73,8 +73,10 @@ console.log('Type FuncParameter accepts a single string or an array of strings')
 function showValue(value: FuncParameter){
   let arr: Array<string> = []
   
-  if (value == 'string'){
+  if (typeof value == 'string'){
     arr.push(value)
+  } else {
+    arr = value
   }
 
   arr.forEach(stringElement => {
